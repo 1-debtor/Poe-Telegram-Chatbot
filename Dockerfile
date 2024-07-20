@@ -10,5 +10,8 @@ COPY . /app
 # 安装依赖
 RUN pip install --no-cache-dir -r requirements.txt
 
+# 暴露端口（例如5000）
+EXPOSE 5000
+
 # 设置容器的入口点为python bot.py
 ENTRYPOINT ["python", "bot.py"]
